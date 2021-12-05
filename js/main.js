@@ -49,10 +49,12 @@ const carregarCarrosel = (name, data) => {
 
 $(async function() {
     try {
-        const dados = await getDados()
+        const result = await getDados();
+        const dados = await result.json()
 
-        criarTituloPrincipal(dados[0].data[0])
-        dados.map(genre => carregarCarrosel(genre.name, genre.data))
+        criarTituloPrincipal(dados[0].data.results[0])
+
+        dados.map(genre => carregarCarrosel(genre.genre, genre.data.results))
 
         inicializarOwl()
 

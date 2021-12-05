@@ -13,6 +13,7 @@ body {
     background: var(--preto);
     font-family: 'Arial', Times, serif;
     color: #fff;
+    min-height: 100vh;
 }
 
 header .container {

@@ -14,6 +14,6 @@
 
 @media screen and (max-width: 1000px) {
     .descricao {
-        width: 50%;
+        white-space: nowrap;
     }
 }

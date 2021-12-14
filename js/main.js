@@ -50,7 +50,7 @@ const loadCarrousels = (dados) => {
         type: 'carousel',
         startAt: 0,
         perView: 9,
-        gap: 12,
+        gap: 20,
         breakpoints: {
             1000: {
                 perView: 7,

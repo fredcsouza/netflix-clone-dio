@@ -1,6 +1,6 @@
 :root {
     --vermelho: #E50914;
-    --preto: #141414;
+    --preto: #181818;
 }
 
 * {
@@ -13,17 +13,20 @@ body {
     background: var(--preto);
     font-family: 'Arial', Times, serif;
     color: #fff;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 15px;
 }
 
 header .logo {
-    margin-top: 10px;
+    padding-top: 5px;
+    width: 130px;
+    height: 45px;
 }
 
 header nav a {
@@ -95,7 +98,7 @@ header nav a:hover {
     position: absolute;
     bottom: 15px;
     right: 15px;
-    width: 80px;
+    width: 50px;
     opacity: 0.4;
 }
 
@@ -105,38 +108,48 @@ header nav a:hover {
     display: block;
 }
 
-.carrosel-filmes {
-    margin-top: 5px;
-}
-
 .genero-titulo {
-    margin: 50px 0 12px 15px;
+    margin: 50px 0 15px 50px;
 }
 
-.owl-prev {
-    width: 15px;
-    height: 100px;
+.glide {
+    position: relative;
+}
+
+.glide__track {
+    margin: 0 35px;
+}
+
+.glide__arrow span {}
+
+.glide__arrow span {
+    margin: 0 15px;
+}
+
+.glide__arrow--left,
+.glide__arrow--right {
     position: absolute;
-    top: 40%;
-    margin-left: 5px;
-    display: block !important;
-    border: 0px solid black;
+    top: 0;
+    z-index: 3;
+    width: 70px;
+    height: 100%;
+    border: none;
+    color: #e50914;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.owl-next {
-    width: 15px;
-    height: 100px;
-    position: absolute;
-    top: 40%;
-    right: 5px;
-    display: block !important;
-    border: 0px solid black;
+.glide__arrow--left {
+    background: linear-gradient(to right, #181818 60%, rgba(24, 24, 24, 0) 100%);
+    text-align: left;
+    left: 0;
 }
 
-.owl-prev i,
-.owl-next i {
-    transform: scale(1, 6);
-    color: #ccc;
+.glide__arrow--right {
+    background: linear-gradient(to left, #181818 60%, rgba(24, 24, 24, 0) 100%);
+    text-align: right;
+    right: 0;
 }
 
 footer {
